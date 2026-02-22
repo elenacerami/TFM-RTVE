@@ -43,6 +43,13 @@ body {
   text-decoration: underline;
 }
 
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 /* TARJETAS portada */
 .cards {
   display: grid;
@@ -109,9 +116,4 @@ body {
     font-size: 1.2rem;
   }
 }
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+
