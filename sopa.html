@@ -2,28 +2,158 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Crucigrama de actualidad</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Sopa de letras</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* HEADER */
+    .rtve-header {
+      background: white;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+      margin-bottom: 20px;
+    }
+
+    .rtve-header h1 {
+      color: #FF6F00;
+      font-size: 22px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #FF6F00;
+    }
+
+    /* CAJA */
+    .game-box {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .game-box h2 {
+      margin-bottom: 20px;
+    }
+
+    /* CONTENEDOR GENIALLY */
+    .genially-wrapper {
+      position: relative;
+      width: 100%;
+      min-height: 500px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #eee;
+    }
+
+    /* BOTÓN VOLVER */
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 15px;
+      text-decoration: none;
+      color: white;
+      background: #FF6F00;
+      padding: 8px 15px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .back-btn:hover {
+      opacity: 0.9;
+    }
+
+  </style>
 </head>
 
 <body>
 
 <header class="rtve-header">
   <div class="container">
-    <h1>Pasatiempos de actualidad</h1>
+    <h1>Pasatiempos RTVE</h1>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="crucigrama.html">Crucigrama</a> 
-      <a href="emparejar-presidentes.html">Relacionar grupos</a>
+      <a href="emparejar-presidentes.html">Relacionar conceptos</a>
       <a href="sopa.html">Sopa de letras</a>
       <a href="trivial.html">Trivial</a>
     </nav>
   </div>
 </header>
 
+<main class="container">
 
-<div class="container-wrapper-genially" style="position: relative; min-height: 400px; max-width: 100%;"><video class="loader-genially" autoplay="autoplay" loop="loop" playsinline="playsInline" muted="muted" style="position: absolute;top: 45%;left: 50%;transform: translate(-50%, -50%);width: 80px;height: 80px;margin-bottom: 10%"><source src="https://static.genially.com/resources/loader-default-rebranding.mp4" type="video/mp4" />Your browser does not support the video tag.</video><div id="699af5559985878422d796a8" class="genially-embed" style="margin: 0px auto; position: relative; height: auto; width: 100%;"></div></div><script>(function (d) { var js, id = "genially-embed-js", ref = d.getElementsByTagName("script")[0]; if (d.getElementById(id)) { return; } js = d.createElement("script"); js.id = id; js.async = true; js.src = "https://view.genially.com/static/embed/embed.js"; ref.parentNode.insertBefore(js, ref); }(document));</script>
+  <article class="game-box">
+
+    <a href="index.html" class="back-btn">← Volver</a>
+
+    <h2>Sopa de letras</h2>
+
+    <div class="genially-wrapper">
+
+      <!-- GENIALLY EMBED -->
+      <div class="container-wrapper-genially" style="position: relative; min-height: 400px; max-width: 100%;">
+        
+        <video class="loader-genially" autoplay loop playsinline muted
+          style="position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%);
+          width: 80px; height: 80px;">
+          <source src="https://static.genially.com/resources/loader-default-rebranding.mp4" type="video/mp4" />
+        </video>
+
+        <div id="699af5559985878422d796a8"
+          class="genially-embed"
+          style="margin: 0 auto; position: relative; width: 100%;">
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+</main>
+
+<!-- SCRIPT GENIALLY (IMPORTANTE: fuera del contenedor) -->
+<script>
+(function (d) {
+  var js, id = "genially-embed-js",
+  ref = d.getElementsByTagName("script")[0];
+  if (d.getElementById(id)) { return; }
+  js = d.createElement("script");
+  js.id = id;
+  js.async = true;
+  js.src = "https://view.genially.com/static/embed/embed.js";
+  ref.parentNode.insertBefore(js, ref);
+}(document));
+</script>
 
 </body>
 </html>

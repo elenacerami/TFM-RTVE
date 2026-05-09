@@ -1,51 +1,294 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pasatiempos de actualidad</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RTVE - Pasatiempos</title>
+<style>
 
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #222;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+header {
+  background: white;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  color: #FF6F00;
+}
+
+/* BANNER */
+.banner {
+  background: linear-gradient(135deg, #1c2b4a, #3a4f7a);
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner button {
+  background: #FF6F00;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* PROGRESS */
+.progress {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.progress div {
+  text-align: center;
+}
+
+.progress span {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* GRID JUEGOS */
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.card button {
+  background: #FF6F00;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* RETOS */
+.challenges {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.challenge {
+  margin-bottom: 15px;
+}
+
+.bar {
+  height: 8px;
+  background: #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  background: #FF6F00;
+  border-radius: 5px;
+}
+
+/* RANKING */
+.ranking {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.ranking ul {
+  list-style: none;
+}
+
+.ranking li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.highlight {
+  background: #ffe5e5;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .progress {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+</style>
+</head>
 <body>
 
-<header class="rtve-header">
-  <div class="container header-inner">
-    <h1>Pasatiempos de actualidad</h1>
-    <nav>
-      <a href="crucigrama.html">Crucigrama</a>
-      <a href="emparejar-presidentes.html">Relacionar grupos</a>
-      <a href="sopa.html">Sopa de letras</a>
-      <a href="trivial.html">Trivial</a>
-    </nav>
+<header>
+  <div class="container">
+    <h1>Pasatiempos RTVE</h1>
   </div>
 </header>
 
-<main class="container">
-  <h2>Elige tu juego</h2>
+<div class="container">
 
-  <div class="cards">
-    <a class="card" href="crucigrama.html">
+  <!-- BANNER -->
+  <section class="banner">
+    <div>
+      <h2>Reto semanal</h2>
+      <p>Demuestra cuánto sabes de la actualidad</p>
+    </div>
+    <button>Jugar ahora</button>
+  </section>
+
+  <!-- PROGRESO -->
+  <section class="progress">
+    <div>
+      <span>970</span>
+      Puntos
+    </div>
+    <div>
+      <span>Nivel 3</span>
+      Usuario
+    </div>
+    <div>
+      <span>3</span>
+      Insignias
+    </div>
+    <div>
+      <span>#15</span>
+      Ranking
+    </div>
+  </section>
+
+  <!-- JUEGOS -->
+  <section class="games">
+    <div class="card">
       <h3>Crucigrama</h3>
-      <p>Pon a prueba cuánto sabes de la actualidad.</p>
-    </a>
+      <p>Actualidad semanal</p>
+      <a href="crucigrama.html">
+  <button>Jugar</button>
+</a>
+    </div>
 
-    <a class="card" href="emparejar-presidentes.html">
-      <h3>Relaciona grupos</h3>
-      <p>Empareja cada comunidad autónoma con su presidente.</p>
-    </a>
+    <div class="card">
+      <h3>Sopa de letras</h3>
+      <p>Especial cultural</p>
+      <a href="sopa.html">
+  <button>Jugar</button>
+</a>
+    </div>
 
-    <a class="card" href="sopa.html">
-      <h3>Sopa de letras Goya 2026</h3>
-      <p>Encuentra las películas nominadas a los Premios Goya.</p>
-    </a>
-
-    <a class="card" href="trivial.html">
+    <div class="card">
       <h3>Trivial</h3>
-      <p>Responde a preguntas sobre actualidad.</p>
-  </div>
-</main>
+      <p>Preguntas sobre noticias</p>
+      <a href="trivial.html">
+  <button>Jugar</button>
+</a>
+    </div>
+
+    <div class="card">
+      <h3>Asociación</h3>
+      <p>Relacionar conceptos</p>
+      <a href="emparejar-presidentes.html">
+  <button>Jugar</button>
+</a>
+    </div>
+  </section>
+
+  <!-- RETOS -->
+  <section class="challenges">
+    <h2>Retos semanales</h2>
+
+    <div class="challenge">
+      Leer noticias 5 días
+      <div class="bar"><span style="width:60%"></span></div>
+    </div>
+
+    <div class="challenge">
+      Completar el trivial
+      <div class="bar"><span style="width:40%"></span></div>
+    </div>
+
+    <div class="challenge">
+      Explorar 3 secciones
+      <div class="bar"><span style="width:80%"></span></div>
+    </div>
+  </section>
+
+  <!-- RANKING -->
+  <section class="ranking">
+    <h2>Ranking semanal</h2>
+    <ul>
+      <li><strong>1. Usuario1</strong> <span>4980 pts</span></li>
+      <li><strong>2. Usuario2</strong> <span>4750 pts</span></li>
+      <li><strong>3. Usuario3</strong> <span>4250 pts</span></li>
+      <li class="highlight"><strong>15. Tú</strong> <span>970 pts</span></li>
+    </ul>
+  </section>
+
+</div>
 
 </body>
 </html>

@@ -3,22 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <title>Crucigrama de actualidad</title>
-  <link rel="stylesheet" href="styles.css">
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* HEADER estilo boceto */
+    .rtve-header {
+      background: white;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+      margin-bottom: 20px;
+    }
+
+    .rtve-header h1 {
+      color: #FF6F00;
+      font-size: 22px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #FF6F00
+      ;
+    }
+
+    /* CAJA DEL JUEGO */
+    .game-box {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .game-box h2 {
+      margin-bottom: 20px;
+    }
+
+    /* IFRAME RESPONSIVE */
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      padding-top: 75%; /* proporción */
+      border-radius: 10px;
+      overflow: hidden;
+      background: #eee;
+    }
+
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* BOTÓN VOLVER */
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 15px;
+      text-decoration: none;
+      color: white;
+      background: #FF6F00;
+      padding: 8px 15px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .back-btn:hover {
+      opacity: 0.9;
+    }
+
+  </style>
 </head>
 
 <body>
 
 <header class="rtve-header">
   <div class="container">
-    <h1>Pasatiempos de actualidad</h1>
+    <h1>Pasatiempos RTVE</h1>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="crucigrama.html">Crucigrama</a>
-      <a href="emparejar-presidentes.html">Relacionar grupos</a>
+      <a href="emparejar-presidentes.html">Relacionar conceptos</a>
       <a href="sopa.html">Sopa de letras</a>
       <a href="trivial.html">Trivial</a>
-        </a>
     </nav>
   </div>
 </header>
@@ -26,19 +122,21 @@
 <main class="container">
 
   <article class="game-box">
+
+    <a href="index.html" class="back-btn">← Volver</a>
+
     <h2>Crucigrama de actualidad</h2>
 
-    <iframe
-      src="https://h5p.org/h5p/embed/1556185"
-      width="1091"
-      height="873"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
+    <div class="iframe-container">
+      <iframe 
+        src="https://h5p.org/h5p/embed/1556185"
+        allowfullscreen>
+      </iframe>
+    </div>
+
   </article>
 
 </main>
-
 
 </body>
 </html>
